@@ -30,5 +30,6 @@ Global
 		{0CF8DD93-1328-479E-9DB1-5C13439683A6}.Release|x64.Build.0 = Release|Any CPU
 		{0CF8DD93-1328-479E-9DB1-5C13439683A6}.Release|x86.ActiveCfg = Release|Any CPU
 		{0CF8DD93-1328-479E-9DB1-5C13439683A6}.Release|x86.Build.0 = Release|Any CPU
+		{0CF8DD93-1328-479E-9DB1-5C13439683A6}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 	EndGlobalSection
 EndGlobal
