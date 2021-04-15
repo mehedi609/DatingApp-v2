@@ -12,12 +12,9 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Messages</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#" (click)="logout()">Logout</a>
-      </li>
     </ul>
 
-    <div class="dropdown" *ngIf="loggedIn" dropdown>
+    <div class="dropdown" *ngIf="accountService.currentUser$ | async" dropdown>
       <a class="dropdown-toggle text-light" dropdownToggle>Welcome User</a>
       <div class="dropdown-menu mt-3" *dropdownMenu>
         <a class="dropdown-item">Edit Profile</a>
@@ -27,7 +24,7 @@
     </div>
 
     <form
-      *ngIf="!loggedIn"
+      *ngIf="(accountService.currentUser$ | async) === null"
       class="form-inline mt-2 mt-md-0"
       #loginForm="ngForm"
       (ngSubmit)="login()"
