@@ -24,7 +24,7 @@
 
 .member-tabset > .nav-tabs > li.open .dropdown-menu,
 .member-tabset > .nav-tabs > li:hover .dropdown-menu {
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 .member-tabset > .nav-tabs > li.active {
@@ -37,6 +37,10 @@
   color: #333333;
 }
 
+.member-tabset > .nav-tabs > li > a:not(.nav-link.active) {
+  color: #e95420;
+}
+
 .member-tabset > .nav-tabs > li.active > a > i {
   color: #404040;
 }
@@ -47,4 +51,9 @@
   border: 0;
   border-top: 1px solid #eee;
   padding: 15px 0;
+}
+
+.ngx-gallery {
+  display: inline-block;
+  margin-bottom: 20px;
 }
