@@ -19,4 +19,8 @@ export class MembersService {
   getMember(username): Observable<Member> {
     return this.http.get<Member>(`${this.baseUrl}/users/${username}`);
   }
+
+  updateMember(member: Member): Observable<any> {
+    return this.http.put(`${this.baseUrl}/users`, member);
+  }
 }
