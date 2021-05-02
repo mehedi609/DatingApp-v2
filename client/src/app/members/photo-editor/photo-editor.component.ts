@@ -58,4 +58,20 @@ export class PhotoEditorComponent implements OnInit {
       }
     };
   }
+
+  setMainPhoto(photo): any {
+    this.memberService.setMainPhoto(photo.id).subscribe(() => {
+      this.user.photoUrl = photo.url;
+      this.member.photoUrl = photo.url;
+      this.accountService.setCurrentUser(this.user);
+      this.member.photos.forEach((eachPhoto) => {
+        if (eachPhoto.isMain) {
+          eachPhoto.isMain = false;
+        }
+        if (eachPhoto.id === photo.id) {
+          eachPhoto.isMain = true;
+        }
+      });
+    });
+  }
 }
